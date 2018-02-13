@@ -51,19 +51,11 @@ critical_days=1
 PORT=443
 while test -n "$1"; do
     case "$1" in
-        --help)
+        -h | --help)
             print_help
             exit $STATE_OK
             ;;
-        -h)
-            print_help
-            exit $STATE_OK
-            ;;
-        --version)
-            print_revision $PROGNAME $REVISION
-            exit $STATE_OK
-            ;;
-        -V)
+        -V | --version)
             print_revision $PROGNAME $REVISION
             exit $STATE_OK
             ;;
